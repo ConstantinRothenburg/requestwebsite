@@ -1,0 +1,316 @@
+Meta{protocol:TOON_v3,project:Request-Website-v2.0,document:ACTION_PLAN_v1}:
+
+Phase_1_Foundation{timeline:Week_1-2,owner:Dev_Lead}:
+- Task_1.1_ProjectSetup{status:PENDING,effort:1d}
+  - Initialize_git_repo_with_main_branch
+  - Create_.gitignore_and_README.md
+  - Setup_folder_structure(COMPLETED)
+  - Document_conventions_in_CONTRIBUTING.md
+- Task_1.2_ConfigFiles{status:PENDING,effort:0.5d}
+  - Create_site-config.yaml(COMPLETED)
+  - Create_colors.yaml_(if_separating_branding)
+  - Create_forms-config.yaml_(endpoint_settings)
+  - Setup_.env.example_for_sensitive_vars
+- Task_1.3_BaseHTML{status:PENDING,effort:1d}
+  - Create_src/pages/index.html_(main_landing)
+  - Create_src/pages/404.html_(error_page)
+  - Setup_base_meta_tags,Open_Graph,structured_data
+  - Add_favicon,webmanifest_for_PWA_(optional)
+- Task_1.4_BaseCSS{status:PENDING,effort:2d}
+  - Create_src/css/reset.css_(or_normalize)
+  - Create_src/css/variables.css_(CSS_custom_props_from_config)
+  - Create_src/css/base.css_(typography,spacing,components)
+  - Create_src/css/sections.css_(full-width,half-height,split_layouts)
+  - Create_src/css/forms.css_(input,button,validation_styles)
+  - Create_src/css/utilities.css_(spacing,visibility,flexbox_helpers)
+  - Create_src/css/responsive.css_(media_queries,mobile-first)
+  - Create_src/css/animations.css_(transitions,scroll_snap_anim)
+
+Phase_2_Sections{timeline:Week_2-3,owner:Template_Designer}:
+- Task_2.1_HeroSection{status:PENDING,effort:1.5d}
+  - Build_hero-section.html_component_(full-width,full-height)
+  - Implement_background_video_(muted,loop,fallback_image)
+  - Add_CTA_buttons,heading,subheading
+  - Mobile_responsive_text_sizing
+- Task_2.2_VideoShowcaseSection{status:PENDING,effort:1d}
+  - Build_video-showcase.html_(split_layout:video+text)
+  - Support_both_modes:bg_loop_or_player_with_controls
+  - Add_lazy-loading_intersection_observer
+  - Mobile_stack_to_single_column
+- Task_2.3_FormSection{status:PENDING,effort:1.5d}
+  - Build_join-form.html_component
+  - Implement_multi-step_form_if_needed_(step_1:name+email,step_2:project_interests)
+  - Add_form_validation_(native_HTML5+light_JS)
+  - Honeypot_spam_field
+  - Success_confirmation_message_or_modal
+- Task_2.4_BenefitsSection{status:PENDING,effort:1d}
+  - Build_benefits_grid_(3col_desktop,1col_mobile)
+  - Add_icons_or_SVG_graphics
+  - Short_copy_per_benefit
+- Task_2.5_CTASection{status:PENDING,effort:0.5d}
+  - Build_closing_CTA_section_(full-width,centered)
+  - Strong_headline+secondary_CTA_button
+  - Email_signup_optional
+- Task_2.6_Footer{status:PENDING,effort:0.5d}
+  - Build_footer_with_links,contact_info
+  - Social_media_icons
+  - Privacy_policy,terms_links
+
+Phase_3_Interactivity{timeline:Week_3-4,owner:Frontend_Dev}:
+- Task_3.1_ScrollSnapping{status:PENDING,effort:1d}
+  - Implement_CSS_scroll-snap-type_on_body/main
+  - Apply_snap-align_to_sections_(hero,video,form)
+  - Test_reduced_motion_prefers-reduced-motion_media_query
+  - Optional_JS:IntersectionObserver_for_nav_highlight
+- Task_3.2_FormHandling{status:PENDING,effort:1.5d}
+  - Choose_backend:
+    - Option_A:getform.io_free_tier_(REST_POST)
+    - Option_B:CloudflareWorker_(D1_DB_or_KV_store)
+    - Option_C:GoogleAppsScript_WebApp_(Google_Sheets_backend)
+  - Create_src/js/form-handler.js
+  - Implement_HTML5_validation
+  - Add_error_display_logic
+  - Add_success_toast_or_modal
+- Task_3.3_VideoLazyLoading{status:PENDING,effort:0.5d}
+  - Add_loading="lazy"_attribute_to_below-fold_videos
+  - Setup_IntersectionObserver_for_video.play()_if_needed
+  - Test_on_slow_3G
+- Task_3.4_SmoothScroll{status:PENDING,effort:0.5d}
+  - Add_scroll-behavior:smooth_to_html_in_CSS
+  - Implement_anchor_links_(#section-id)
+  - Optional_nav_header_with_smooth_scroll_to_sections
+
+Phase_4_Optimization{timeline:Week_4,owner:Perf_Lead}:
+- Task_4.1_ImageOptimization{status:PENDING,effort:1d}
+  - Run_all_images_through_TinyPNG,ImageOptim,or_Squoosh
+  - Create_WebP+AVIF_versions_with_JPEG_fallback
+  - Add_responsive_images_with_srcset(1x,2x,3x)
+  - Optimize_poster_images_for_videos
+- Task_4.2_CSSMinification{status:PENDING,effort:0.5d}
+  - Generate_minified_CSS_if_not_automating_(cssnano,PurgeCSS)
+  - Inline_critical_CSS_for_above-fold_content_(optional)
+  - Remove_unused_CSS_classes
+- Task_4.3_JSMinification{status:PENDING,effort:0.5d}
+  - Minify_form-handler.js_and_scroll_scripts
+  - Tree-shake_unused_code
+- Task_4.4_Fonts{status:PENDING,effort:0.5d}
+  - Use_system_fonts_or_Google_Fonts_with_font-display:swap
+  - Preload_critical_fonts_in_<head>
+  - Subset_fonts_to_latin_or_specific_language
+- Task_4.5_LightHouse_Audit{status:PENDING,effort:0.5d}
+  - Run_Lighthouse_CI_locally
+  - Ensure_LCP<2.5s,FID<100ms,CLS<0.1
+  - Performance_score_>90
+  - Accessibility_score_>95
+  - SEO_score_>95
+
+Phase_5_A11y_SEO{timeline:Concurrent_Weeks_2-4,owner:QA_Lead}:
+- Task_5.1_Accessibility{status:PENDING,effort:1.5d}
+  - Run_axe_DevTools_on_every_page
+  - Ensure_color_contrast_4.5:1_body_text,3:1_large_text
+  - Add_ARIA_labels_to_form_inputs,icon_buttons
+  - Test_keyboard_navigation_(Tab,Enter,Escape)
+  - Ensure_focus_indicators_visible_on_all_buttons
+  - Add_skip-to-main_link_(hidden,focusable)
+  - Test_with_screen_reader_(VoiceOver_Mac,NVDA_Windows)
+- Task_5.2_SEO_Setup{status:PENDING,effort:1d}
+  - Create_meta_descriptions_(155_chars_max)
+  - Setup_Open_Graph_tags_(title,desc,image,url)
+  - Generate_robots.txt_and_sitemap.xml
+  - Setup_Google_Analytics_or_Plausible_tracking_code
+  - Test_with_Google_Mobile_Friendly_Test
+  - Verify_structured_data_(schema.org_Organization)
+- Task_5.3_Mobile_Testing{status:PENDING,effort:1d}
+  - Test_on_real_iOS_12.2+_devices
+  - Test_on_real_Android_10+_devices
+  - Check_touch_target_sizes_(48x48px_minimum)
+  - Ensure_form_inputs_don't_trigger_zoom_on_focus
+  - Test_video_playback_on_slow_3G
+
+Phase_6_Deployment{timeline:Week_5,owner:DevOps_Lead}:
+- Task_6.1_ChooseHosting{status:PENDING,effort:0.5d}
+  - Decision:Cloudflare_Pages_vs_Vercel_vs_GitHub_Pages
+  - Pros/Cons:
+    - Cloudflare_Pages:Free,fast,has_Workers_for_forms,zero_config
+    - Vercel:Free,fast,preview_deployments,form_integration_paid
+    - GitHub_Pages:Free,simple,limited_dynamic_features
+  - Recommended:Cloudflare_Pages+Workers_for_form_backend
+- Task_6.2_DomainSetup{status:PENDING,effort:0.5d}
+  - Register_domain_or_update_DNS
+  - Setup_CNAME_or_A_record_pointing_to_host
+  - Enable_HTTPS_(automatic_with_CF,Vercel)
+  - Setup_email_forwarding_or_MX_records
+- Task_6.3_FormBackend{status:PENDING,effort:1d}
+  - Setup_chosen_form_endpoint_(getform.io,CF_Worker,GoogleAppsScript)
+  - Create_notification_email_template
+  - Test_end-to-end_form_submission
+  - Setup_redirect_after_success_(or_same_page_modal)
+- Task_6.4_Analytics{status:PENDING,effort:0.5d}
+  - Create_Plausible_or_GA4_account
+  - Add_tracking_script_to_<head>
+  - Setup_goal_tracking_for_form_submission
+  - Setup_goal_tracking_for_video_plays
+  - Test_in_incognito_mode
+- Task_6.5_SSL_Security{status:PENDING,effort:0.5d}
+  - Ensure_HTTPS_enforced_(redirect_http_to_https)
+  - Setup_security_headers_(CSP,X-Frame-Options,etc)
+  - Test_with_Mozilla_Observatory
+- Task_6.6_DNSandCDN{status:PENDING,effort:0.5d}
+  - Verify_DNS_propagation_(use_dig_or_nslookup)
+  - Enable_Cloudflare_caching_rules_if_CF
+  - Setup_cache_headers_for_static_assets_(max-age:31536000)
+
+Phase_7_Testing_QA{timeline:Week_5,owner:QA_Team}:
+- Task_7.1_BrowserCompat{status:PENDING,effort:1d}
+  - Test_Chrome_latest_2_versions
+  - Test_Firefox_latest_2_versions
+  - Test_Safari_latest_2_versions
+  - Test_Edge_latest_2_versions
+  - Use_BrowserStack_or_CanIUse_for_reference
+- Task_7.2_ResponsiveDesign{status:PENDING,effort:1d}
+  - Test_viewport_sizes:
+    - 320px_(iPhone_SE)
+    - 768px_(iPad)
+    - 1024px_(iPad_Pro)
+    - 1440px_(Desktop)
+    - 1920px_(Desktop_4K)
+  - Ensure_text_readable,images_load,buttons_clickable
+- Task_7.3_FormTesting{status:PENDING,effort:1d}
+  - Submit_valid_form_data
+  - Test_validation_errors_(empty_fields,invalid_email)
+  - Test_honeypot_spam_protection
+  - Verify_email_notification_arrives
+  - Test_success_message_displays
+  - Test_form_clear_on_success
+- Task_7.4_VideoTesting{status:PENDING,effort:0.5d}
+  - Test_hero_video_autoplay_on_desktop
+  - Test_hero_video_paused_on_mobile_(bandwidth_saving)
+  - Test_video_controls_on_player_section
+  - Test_lazy_loading_of_below-fold_videos
+  - Test_fallback_poster_image_displays_while_loading
+- Task_7.5_LinkTesting{status:PENDING,effort:0.5d}
+  - Verify_all_internal_links_work
+  - Verify_external_links_open_in_new_tab
+  - Test_anchor_links_(scroll_to_#section-id)
+- Task_7.6_FormTesting_Edge_Cases{status:PENDING,effort:0.5d}
+  - Test_on_slow_network_3G_with_DevTools_throttling
+  - Test_form_submission_on_spotty_connection
+  - Test_video_buffering_on_slow_network
+  - Test_offline_behavior_(service_worker_optional)
+
+Phase_8_Launch_Prep{timeline:Week_5,owner:Product_Lead}:
+- Task_8.1_Copywriting{status:PENDING,effort:1d}
+  - Finalize_hero_headline,subheading
+  - Finalize_form_CTA_copy
+  - Finalize_benefits_section_copy
+  - Finalize_footer_links,social_handles
+  - Proofread_for_grammar,brand_voice
+- Task_8.2_ImagesVideo{status:PENDING,effort:1.5d}
+  - Source_or_shoot_hero_video_(or_use_stock)
+  - Source_section_images_(or_placeholder_until_content_ready)
+  - Create_video_poster_images_(thumbnail_for_before_play)
+  - Create_OG_image_(1200x630px_for_social_sharing)
+  - Compress_all_images_before_upload
+- Task_8.3_Documentation{status:PENDING,effort:1d}
+  - Write_README.md_(project_overview,setup_instructions)
+  - Write_CONTRIBUTING.md_(git_workflow,code_style)
+  - Write_DEPLOYMENT.md_(how_to_deploy_changes)
+  - Create_CHANGELOG.md_(v1.0_initial_release)
+  - Create_API_ENDPOINTS.md_if_using_form_backend
+- Task_8.4_RedirectSetup{status:PENDING,effort:0.5d}
+  - Setup_301_redirects_for_old_URLs_if_migrating
+  - Setup_404_custom_page
+  - Setup_robots.txt_to_disallow_staging_URL
+- Task_8.5_Monitor_Setup{status:PENDING,effort:0.5d}
+  - Setup_Uptime_Kuma_or_Pingdom_for_uptime_monitoring
+  - Setup_error_alerting_in_analytics
+  - Setup_form_submission_failure_alerts
+
+Phase_9_Launch{timeline:Day_35,owner:Release_Manager}:
+- Task_9.1_FinalChecklist{status:PENDING,effort:0.5d}
+  - [ ] All_Lighthouse_scores_>90
+  - [ ] All_form_submissions_working
+  - [ ] All_videos_play_smoothly
+  - [ ] All_pages_mobile_responsive
+  - [ ] Analytics_tracking_verified
+  - [ ] HTTPS_enforced
+  - [ ] 404_page_works
+  - [ ] SEO_meta_tags_complete
+  - [ ] Privacy_policy_accessible
+  - [ ] No_console_errors_in_DevTools
+- Task_9.2_Deploy{status:PENDING,effort:0.5h}
+  - Push_to_main_branch_or_trigger_production_build
+  - Verify_site_live_and_accessible
+  - Smoke_test_on_live_domain
+- Task_9.3_PostLaunchMonitoring{status:PENDING,effort:ongoing}
+  - Monitor_Lighthouse_scores_daily_first_week
+  - Monitor_form_submission_volume
+  - Monitor_uptime_and_error_logs
+  - Monitor_analytics_visitor_metrics
+  - Prepare_to_respond_to_user_feedback
+
+Phase_10_PostLaunch_Iteration{timeline:Week_6+,owner:Product_Team}:
+- Task_10.1_AnalyticsReview{status:PENDING,effort:weekly}
+  - Analyze_visitor_behavior,bounce_rates,form_conversion
+  - Identify_underperforming_sections
+  - A/B_test_CTA_copy_if_tools_available
+- Task_10.2_UserFeedback{status:PENDING,effort:ongoing}
+  - Collect_form_data_and_support_emails
+  - Address_bugs_or_usability_issues
+  - Create_GitHub_Issues_for_improvements
+- Task_10.3_ContentUpdates{status:PENDING,effort:monthly}
+  - Update_project_counts_and_statistics
+  - Refresh_testimonials_or_case_studies
+  - Update_footer_social_links,contact_info
+- Task_10.4_PerfMonitoring{status:PENDING,effort:ongoing}
+  - Monthly_Lighthouse_audit
+  - Monitor_Core_Web_Vitals_in_Google_Analytics
+  - Optimize_if_metrics_degrade
+
+Dependencies_and_Blockers:
+- Form_backend_decision_blocks:Task_3.2,Task_6.3
+- Content_ready_blocks:Task_8.2,Task_2.x
+- Domain_ready_blocks:Task_6.2,Task_6.6
+- Design_assets_blocks:Task_4.1,Task_8.2
+
+Success_Criteria:
+- Site_live_at_request-climate.com
+- Form_submission_working_with_email_notifications
+- Lighthouse_Performance>90,Accessibility>95,SEO>95
+- Mobile_responsive_on_320px-1920px
+- LCP<2.5s,FID<100ms,CLS<0.1
+- All_WCAG_2.1_AA_standards_met
+- 100%_form_submission_success_rate_on_launch_week
+- Analytics_installed_and_tracking_correctly
+
+Timeline_Summary:
+- Phase_1_Foundation:2d
+- Phase_2_Sections:5d
+- Phase_3_Interactivity:3d
+- Phase_4_Optimization:2d
+- Phase_5_A11y_SEO:3d_(concurrent_2-4)
+- Phase_6_Deployment:2d
+- Phase_7_Testing_QA:3d
+- Phase_8_Launch_Prep:3d_(concurrent_with_testing)
+- Phase_9_Launch:1d
+- Phase_10_PostLaunch:ongoing
+- TOTAL:~5-6_weeks_for_full_launch
+
+Risks_and_Mitigation:
+- Risk:Form_backend_downtime
+  - Mitigation:Use_redundant_backend_(email+getform.io)
+- Risk:Video_loading_too_slow
+  - Mitigation:Lazy-load_below-fold_videos,short_durations
+- Risk:Mobile_performance_degradation
+  - Mitigation:Disable_autoplay_on_mobile,lazy_load_images
+- Risk:Accessibility_standards_missed
+  - Mitigation:Weekly_axe_DevTools_audits,screen_reader_testing
+- Risk:Form_spam
+  - Mitigation:Honeypot_field,rate_limiting_on_backend
+
+Notes:
+- All_CSS_and_JS_should_remain_framework-free_for_simplicity_and_fast_load_times
+- Keep_dependencies_minimal_(no_webpack,gulp,npm_unless_adding_complexity_justified)
+- Focus_on_static_HTML+CSS+minimal_JS_for_fastest_load_times
+- Document_every_config_change_in_commit_messages
+- Review_and_close_GitHub_Issues_weekly

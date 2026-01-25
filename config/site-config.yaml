@@ -1,0 +1,190 @@
+Meta{protocol:TOON_v3,project:Request-Website-v2.0,version:1.0}:
+
+SiteMetadata{scope:global_site_config,format:YAML}:
+- site_name:"Request - Climate Action Platform"
+- site_url:"https://request-climate.com"
+- site_description:"Connect with vetted climate projects. Get matched in days, not months. Join 100+ organizations cutting emissions."
+- favicon_path:"/src/assets/images/favicon.ico"
+- og_image:"/src/assets/images/og-image-1200x630.jpg"
+- robots_txt:true
+- sitemap_xml:true
+
+BrandingColors{palette,contrast_check}:
+- Primary:"#208380"
+  - Hover:"#177367"
+  - Active:"#156b5e"
+  - RGB:"32,131,128"
+  - Usage:CTAs,buttons,primary_accents
+- Secondary:"#5E5240"
+  - RGB:"94,82,64"
+  - Usage:Forms,borders,secondary_accents
+- Neutral_Light:"#FCFCF9"
+  - RGB:"252,252,249"
+  - Usage:Backgrounds,cards
+- Neutral_Dark:"#1F2121"
+  - RGB:"31,33,33"
+  - Usage:Text,dark_backgrounds
+- Error:"#C0152F"
+  - RGB:"192,21,47"
+  - Usage:Validation,alerts
+- Success:"#208380"
+  - Usage:Success_states,confirmations
+- Warning:"#A84F2F"
+  - Usage:Warnings,cautions
+- Focus_Ring:"rgba(32,131,128,0.4)"
+  - Usage:Accessibility,focus_states
+
+Typography{fonts,scales}:
+- FontFamily_Heading:"Inter, Geist, -apple-system, BlinkMacSystemFont, sans-serif"
+- FontFamily_Body:"Inter, Geist, -apple-system, BlinkMacSystemFont, sans-serif"
+- FontFamily_Mono:"Berkeley Mono, Menlo, Monaco, Consolas, monospace"
+- FontWeights:
+  - Light:300
+  - Regular:400
+  - Medium:500
+  - Semibold:550
+  - Bold:600
+- FontSizes:
+  - h1:"clamp(2rem,5vw,3rem)" # 32px-48px
+  - h2:"clamp(1.5rem,4vw,2.4rem)" # 24px-38px
+  - h3:"clamp(1.25rem,3vw,2rem)" # 20px-32px
+  - body:"1rem" # 16px
+  - small:"0.875rem" # 14px
+  - xs:"0.75rem" # 12px
+- LineHeights:
+  - Tight:1.2
+  - Normal:1.5
+  - Loose:1.8
+- LetterSpacing:
+  - Tight:"-0.01em"
+  - Normal:"0"
+
+Spacing_System{scale,tokens}:
+- Scale:"4px base_unit"
+- Tokens:
+  - xs:"0.25rem" # 4px
+  - sm:"0.5rem" # 8px
+  - md:"1rem" # 16px
+  - lg:"1.5rem" # 24px
+  - xl:"2rem" # 32px
+  - 2xl:"3rem" # 48px
+  - 3xl:"4rem" # 64px
+- SectionSpacing:"clamp(2.5rem,4vw,5rem)"
+- MaxWidth_Container:"1200px"
+- PaddingHorizontal_Default:"1.5rem"
+
+BorderRadius{tokens}:
+- None:"0"
+- Sm:"6px"
+- Base:"8px"
+- Md:"10px"
+- Lg:"12px"
+- Full:"9999px"
+
+Shadows{depth,tokens}:
+- Xs:"0_1px_2px_rgba(0,0,0,0.02)"
+- Sm:"0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.02)"
+- Md:"0_4px_6px_-1px_rgba(0,0,0,0.04),0_2px_4px_-1px_rgba(0,0,0,0.02)"
+- Lg:"0_10px_15px_-3px_rgba(0,0,0,0.04),0_4px_6px_-2px_rgba(0,0,0,0.02)"
+
+Animation{timing,motion}:
+- DurationFast:"150ms"
+- DurationNormal:"250ms"
+- EaseStandard:"cubic-bezier(0.16,1,0.3,1)"
+- PreferReducedMotion:true
+- ScrollBehavior:"smooth"
+
+SEO_Defaults{meta,schema}:
+- Charset:"UTF-8"
+- Viewport:"width=device-width,initial-scale=1.0"
+- Language:"en"
+- ThemeColor:"#208380"
+- AppleMobileWebAppCapable:true
+- AppleMobileWebAppStatusBarStyle:"black-translucent"
+- SchemaType:"Organization"
+- OpenGraphType:"website"
+
+Deployment{hosting,env}:
+- Provider:"Cloudflare Pages / Vercel"
+- Environment_Dev:"localhost:5500 or live_server"
+- Environment_Prod:"request-climate.com"
+- BuildCommand:"Optional: PostCSS minify, image optimize"
+- DeployTrigger:"Git push to main branch"
+
+A11y_Standards{wcag,testing}:
+- Target_Level:"WCAG 2.1 AA"
+- ColorContrast_Normal:"4.5:1"
+- ColorContrast_Large:"3:1"
+- FocusIndicator:"2px solid primary_color"
+- TabOrder:"Logical flow, skip_to_main"
+- AltText_Images:"Descriptive, concise"
+- ARIA_Labels:"For_form_inputs,icons,dynamic_content"
+- SkipLink:"Hidden, focusable, visible_on_focus"
+
+Performance_Targets{metrics,budgets}:
+- LCP:"<2.5s" # Largest Contentful Paint
+- FID:"<100ms" # First Input Delay
+- CLS:"<0.1" # Cumulative Layout Shift
+- PageSize_HTML:"<50KB"
+- PageSize_CSS:"<30KB_minified"
+- PageSize_JS:"<20KB_minified"
+- ImageOptim:true # WebP+AVIF with fallback
+- LazyLoad_Images:true
+- LazyLoad_Videos:true
+
+BrowserSupport{targets}:
+- Chrome:"Latest 2 versions"
+- Firefox:"Latest 2 versions"
+- Safari:"Latest 2 versions"
+- Edge:"Latest 2 versions"
+- Mobile:"iOS 13+, Android 10+"
+
+FormDefaults{validation,submission}:
+- ValidationTrigger:"On blur + on submit"
+- ErrorDisplay:"Inline under field"
+- SuccessMessage:"Toast or section confirmation"
+- ClearOnSuccess:true
+- BackendEndpoint:"TBD (getform.io | CloudflareWorker | GoogleAppsScript)"
+
+Analytics{tracking}:
+- Provider:"Plausible (privacy-first) or Google Analytics 4"
+- TrackPageViews:true
+- TrackFormSubmissions:true
+- TrackVideoPlays:true
+- CookieConsent:"Simple banner, EU-compliant"
+
+Fonts_Import{providers}:
+- Inter:"system_fallback_or_Google_Fonts_optimized"
+- Berkeley_Mono:"Optional_for_code_sections"
+- Strategy:"font-display:swap for LCP optimization"
+
+CI_CD{process}:
+- VCS:"Git (main branch for prod)"
+- CI_Tool:"GitHub Actions (optional) or manual git push"
+- PreDeploy_Checks:
+  - HTML_validation:"W3C valid HTML"
+  - CSS_linting:"No_critical_errors"
+  - A11y_audit:"axe_devtools_or_WAVE"
+  - Image_sizes:"Optimized,<200KB_per_image"
+- DeploymentApproval:"Automatic on main branch push"
+
+FileNaming_Conventions{rules}:
+- HTML:"kebab-case.html" # index.html, contact-form.html
+- CSS:"kebab-case.css" # base.css, sections.css, forms.css
+- JS:"kebab-case.js" # form-handler.js, scroll-snap.js
+- Images:"kebab-case-{width}x{height}.jpg" # hero-image-1920x1080.jpg
+- Videos:"kebab-case-{duration}s.mp4" # hero-bg-8s.mp4
+- Config:"kebab-case.yaml" # site-config.yaml, colors.yaml
+
+GitIgnore_Items:
+- "node_modules/"
+- ".env.local"
+- ".DS_Store"
+- "dist/"
+- "*.log"
+- ".vscode/workspace_settings.json"
+- "build/"
+
+License:"MIT"
+Author:"Climate Request Team"
+LastUpdated:"2026-01-25"

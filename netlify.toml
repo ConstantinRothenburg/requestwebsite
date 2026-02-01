@@ -1,0 +1,67 @@
+[build]
+  publish = "src"
+  command = ""
+
+# Redirects for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Asset caching - 1 year immutable
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+    content-type = "text/css; charset=utf-8"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+    content-type = "text/javascript; charset=utf-8"
+
+[[headers]]
+  for = "*.jpg *.jpeg *.png *.webp *.avif *.svg *.gif *.ico"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.woff *.woff2 *.ttf *.otf *.eot"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.mp4 *.webm *.ogg"
+  [headers.values]
+    cache-control = "public, max-age=86400"
+
+# HTML - browser cache only
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    cache-control = "public, max-age=0, must-revalidate"
+    x-ua-compatible = "IE=edge"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    x-frame-options = "DENY"
+    x-xss-protection = "1; mode=block"
+    x-content-type-options = "nosniff"
+    referrer-policy = "strict-origin-when-cross-origin"
+    permissions-policy = "geolocation=(), microphone=(), camera=()"
+
+# Netlify Forms
+[[headers]]
+  for = "form"
+  [headers.values]
+    x-frame-options = "DENY"
+
+# Preload critical resources
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    link = "</css/index.css>; rel=preload; as=style, </js/lazy-load.js>; rel=preload; as=script"
+

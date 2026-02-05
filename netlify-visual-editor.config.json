@@ -1,0 +1,341 @@
+{
+  "version": "1.0.0",
+  "name": "Request Climate Action Platform",
+  "description": "Visual Editor configuration for Request website",
+  "editor": {
+    "enabled": true,
+    "mode": "inline",
+    "theme": {
+      "primaryColor": "#208380",
+      "secondaryColor": "#5E5240",
+      "accentColor": "#ff005a",
+      "backgroundColor": "#FCFCF9",
+      "textColor": "#1F2121"
+    },
+    "features": {
+      "inlineTextEditing": true,
+      "imageReplacement": true,
+      "linkEditing": true,
+      "colorPicker": true,
+      "styleEditor": true,
+      "layoutControls": true,
+      "componentOutlines": true,
+      "hoverHighlight": true,
+      "clickToEdit": true,
+      "contextMenu": true,
+      "undoRedo": true,
+      "autoSave": true,
+      "livePreview": true
+    },
+    "permissions": {
+      "allowTextEditing": true,
+      "allowImageReplacement": true,
+      "allowLinkEditing": true,
+      "allowColorEditing": true,
+      "allowStyleTweaks": true,
+      "allowLayoutChanges": false,
+      "allowScriptEditing": false,
+      "requireApproval": false
+    },
+    "autoSave": {
+      "enabled": true,
+      "interval": 30000,
+      "showIndicator": true
+    },
+    "history": {
+      "enabled": true,
+      "maxVersions": 50
+    }
+  },
+  "content": {
+    "fields": [
+      {
+        "id": "hero.subtitle",
+        "label": "Hero Subtitle",
+        "type": "text",
+        "maxLength": 200,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "hero.ctas",
+        "label": "Hero Call-to-Actions",
+        "type": "component",
+        "editable": true
+      },
+      {
+        "id": "section1.headline",
+        "label": "Section 1: Deep Dive Headline",
+        "type": "text",
+        "maxLength": 100,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "section1.background",
+        "label": "Section 1: Background Video",
+        "type": "video",
+        "accept": ["video/mp4", "video/webm"],
+        "editable": true
+      },
+      {
+        "id": "section1.poster",
+        "label": "Section 1: Video Cover Image",
+        "type": "image",
+        "accept": ["image/jpg", "image/jpeg", "image/png", "image/webp"],
+        "description": "Cover image displayed before video plays",
+        "editable": true
+      },
+      {
+        "id": "section2.headline",
+        "label": "Section 2: Global Innovations Headline",
+        "type": "text",
+        "maxLength": 100,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "section2.background",
+        "label": "Section 2: Background Video",
+        "type": "video",
+        "accept": ["video/mp4", "video/webm"],
+        "editable": true
+      },
+      {
+        "id": "section2.poster",
+        "label": "Section 2: Video Cover Image",
+        "type": "image",
+        "accept": ["image/jpg", "image/jpeg", "image/png", "image/webp"],
+        "description": "Cover image displayed before video plays",
+        "editable": true
+      },
+      {
+        "id": "section3.headline",
+        "label": "Section 3: Network Headline",
+        "type": "text",
+        "maxLength": 100,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "section3.background",
+        "label": "Section 3: Background Video",
+        "type": "video",
+        "accept": ["video/mp4", "video/webm"],
+        "editable": true
+      },
+      {
+        "id": "section3.poster",
+        "label": "Section 3: Video Cover Image",
+        "type": "image",
+        "accept": ["image/jpg", "image/jpeg", "image/png", "image/webp"],
+        "description": "Cover image displayed before video plays",
+        "editable": true
+      },
+      {
+        "id": "section4.headline",
+        "label": "Section 4: Register Headline",
+        "type": "text",
+        "maxLength": 100,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "section4.background",
+        "label": "Section 4: Background Video",
+        "type": "video",
+        "accept": ["video/mp4", "video/webm"],
+        "editable": true
+      },
+      {
+        "id": "section4.poster",
+        "label": "Section 4: Video Cover Image",
+        "type": "image",
+        "accept": ["image/jpg", "image/jpeg", "image/png", "image/webp"],
+        "description": "Cover image displayed before video plays",
+        "editable": true
+      },
+      {
+        "id": "section5.headline",
+        "label": "Section 5: Join Movement Headline",
+        "type": "text",
+        "maxLength": 100,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "section5.background",
+        "label": "Section 5: Background Video",
+        "type": "video",
+        "accept": ["video/mp4", "video/webm"],
+        "editable": true
+      },
+      {
+        "id": "section5.poster",
+        "label": "Section 5: Video Cover Image",
+        "type": "image",
+        "accept": ["image/jpg", "image/jpeg", "image/png", "image/webp"],
+        "description": "Cover image displayed before video plays",
+        "editable": true
+      },
+      {
+        "id": "section6.headline",
+        "label": "Section 6: Save Planet Headline",
+        "type": "text",
+        "maxLength": 100,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "section6.background",
+        "label": "Section 6: Background Image",
+        "type": "image",
+        "accept": ["image/jpg", "image/jpeg", "image/png", "image/webp"],
+        "editable": true
+      },
+      {
+        "id": "section7.headline",
+        "label": "Section 7: Impact 2025 Headline",
+        "type": "text",
+        "maxLength": 100,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "section7.backgroundColor",
+        "label": "Section 7: Background Color",
+        "type": "color",
+        "editable": true
+      },
+      {
+        "id": "form.title",
+        "label": "Form Section Title",
+        "type": "text",
+        "maxLength": 100,
+        "required": true,
+        "editable": true
+      },
+      {
+        "id": "form.description",
+        "label": "Form Section Description",
+        "type": "text",
+        "maxLength": 300,
+        "editable": true
+      }
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "name": "Hero Section",
+        "icon": "star",
+        "description": "Main hero section with headline and CTAs"
+      },
+      {
+        "id": "section1",
+        "name": "Deep Dive Section",
+        "icon": "search",
+        "description": "Climate change solutions overview"
+      },
+      {
+        "id": "section2",
+        "name": "Global Innovations",
+        "icon": "globe",
+        "description": "Explore global climate innovations"
+      },
+      {
+        "id": "section3",
+        "name": "Network Section",
+        "icon": "users",
+        "description": "Network with gamechangers"
+      },
+      {
+        "id": "section4",
+        "name": "Register Section",
+        "icon": "edit",
+        "description": "Showcase your vision"
+      },
+      {
+        "id": "section5",
+        "name": "Movement Section",
+        "icon": "trending-up",
+        "description": "Join the movement"
+      },
+      {
+        "id": "section6",
+        "name": "Save Planet",
+        "icon": "heart",
+        "description": "Together save our planet"
+      },
+      {
+        "id": "section7",
+        "name": "Impact Section",
+        "icon": "target",
+        "description": "Start making an impact"
+      },
+      {
+        "id": "form",
+        "name": "Registration Form",
+        "icon": "file-text",
+        "description": "User registration form"
+      }
+    ]
+  },
+  "preview": {
+    "enabled": true,
+    "breakpoints": [
+      {
+        "name": "Mobile",
+        "width": 375,
+        "icon": "smartphone"
+      },
+      {
+        "name": "Tablet",
+        "width": 768,
+        "icon": "tablet"
+      },
+      {
+        "name": "Desktop",
+        "width": 1440,
+        "icon": "monitor"
+      },
+      {
+        "name": "Wide",
+        "width": 1920,
+        "icon": "tv"
+      }
+    ],
+    "defaultBreakpoint": "Desktop"
+  },
+  "validation": {
+    "enabled": true,
+    "rules": {
+      "textFields": {
+        "trimWhitespace": true,
+        "preventEmptyValues": true,
+        "maxLengthEnforced": true
+      },
+      "imageFields": {
+        "maxFileSize": 5242880,
+        "allowedFormats": ["jpg", "jpeg", "png", "webp", "avif"],
+        "requireAltText": true
+      },
+      "videoFields": {
+        "maxFileSize": 52428800,
+        "allowedFormats": ["mp4", "webm"],
+        "requirePoster": false
+      },
+      "colorFields": {
+        "format": "hex",
+        "allowTransparency": true
+      }
+    }
+  },
+  "publishing": {
+    "autoPublish": false,
+    "requireReview": false,
+    "notifications": {
+      "enabled": true,
+      "channels": ["email", "webhook"]
+    }
+  }
+}

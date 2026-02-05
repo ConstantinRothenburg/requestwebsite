@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>404 - Page Not Found | Request</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #208380 0%, #5E5240 100%);
+            padding: 2rem;
+        }
+        .error-content {
+            text-align: center;
+            color: white;
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 1rem;
+            font-family: var(--font-heading), sans-serif;
+        }
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: var(--font-heading), sans-serif;
+        }
+        .error-message {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .error-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #208380;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .error-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Page Not Found</h1>
+            <p class="error-message">
+                The page you're looking for doesn't exist or has been moved.
+                Let's get you back to exploring climate solutions.
+            </p>
+            <a href="/pages/index.html" class="error-button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

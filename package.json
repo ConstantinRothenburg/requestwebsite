@@ -1,0 +1,40 @@
+{
+  "name": "request-climate-platform",
+  "version": "2.0.0",
+  "description": "Climate Action Platform - One-page landing with visual editor",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev",
+    "dev:http": "python3 -m http.server 5500 --directory src",
+    "build": "echo 'No build step required for static HTML'",
+    "stackbit:dev": "stackbit dev",
+    "stackbit:build": "stackbit build",
+    "format": "prettier --write \"src/**/*.{html,css,js}\"",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "validate:html": "html-validate \"src/pages/**/*.html\""
+  },
+  "devDependencies": {
+    "@netlify/plugin-visual-editor": "latest",
+    "@stackbit/types": "^2.1.15",
+    "html-validate": "^8.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "keywords": [
+    "climate",
+    "sustainability",
+    "landing-page",
+    "netlify",
+    "stackbit",
+    "visual-editor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oytla/Request-Website-v2.0.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

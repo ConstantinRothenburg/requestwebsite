@@ -2,9 +2,9 @@
   publish = "src"
   command = ""
 
-# Netlify Visual Editor Plugin (commented out for local dev)
-# [[plugins]]
-#   package = "@netlify/plugin-visual-editor"
+# Netlify Visual Editor Plugin
+[[plugins]]
+  package = "@netlify/plugin-visual-editor"
 
 [dev]
   command = "python3 -m http.server 5501 --directory src"

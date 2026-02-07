@@ -1,0 +1,26 @@
+{
+  "id": "full_screen_section",
+  "type": "SharedSlice",
+  "name": "FullScreenSection",
+  "description": "FullScreenSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "full_screen_section",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "video_url": {
+          "type": "Text",
+          "config": {
+            "label": "video_url",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cta_banner",
+  "type": "SharedSlice",
+  "name": "CTABanner",
+  "description": "Gradient CTA banner with headline, description, and primary button",
+  "variations": [{
+    "id": "default",
+    "name": "Default",
+    "docURL": "...",
+    "version": "initial",
+    "description": "Default CTABanner variation",
+    "imageUrl": "",
+    "primary": {
+      "headline": {"type": "StructuredText", "config": {"label": "Headline", "single": "heading2", "placeholder": "Ready to Join?"}},
+      "description": {"type": "StructuredText", "config": {"label": "Description", "multi": "paragraph, strong, em", "placeholder": "Join the movement and make an impact..."}},
+      "buttonText": {"type": "Text", "config": {"label": "Button Text", "placeholder": "Join Now"}},
+      "buttonLink": {"type": "Link", "config": {"label": "Button Link"}}
+    }
+  }]}

@@ -1,0 +1,20 @@
+{
+  "id": "footer",
+  "type": "SharedSlice",
+  "name": "Footer",
+  "description": "Dark footer with copyright text and navigation links",
+  "variations": [{
+    "id": "default",
+    "name": "Default",
+    "docURL": "...",
+    "version": "initial",
+    "description": "Default Footer variation",
+    "imageUrl": "",
+    "primary": {
+      "copyrightText": {"type": "Text", "config": {"label": "Copyright Text", "placeholder": "© 2025 Climate Solutions. All rights reserved."}},
+      "links": {"type": "Group", "config": {"label": "Footer Links", "fields": {
+        "label": {"type": "Text", "config": {"label": "Link Label", "placeholder": "Privacy Policy"}},
+        "url": {"type": "Link", "config": {"label": "Link URL"}}
+      }}}
+    }
+  }]}

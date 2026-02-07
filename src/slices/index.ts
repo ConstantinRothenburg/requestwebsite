@@ -3,5 +3,6 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  full_screen_section: dynamic(() => import("./FullScreenSection")),
   rich_text: dynamic(() => import("./RichText")),
 };

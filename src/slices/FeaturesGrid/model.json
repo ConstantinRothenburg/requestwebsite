@@ -1,0 +1,21 @@
+{
+  "id": "features_grid",
+  "type": "SharedSlice",
+  "name": "FeaturesGrid",
+  "description": "3-column grid of feature cards with icons, titles, descriptions, and links",
+  "variations": [{
+    "id": "default",
+    "name": "Default",
+    "docURL": "...",
+    "version": "initial",
+    "description": "Default FeaturesGrid variation",
+    "imageUrl": "",
+    "primary": {
+      "features": {"type": "Group", "config": {"label": "Features", "fields": {
+        "icon": {"type": "Select", "config": {"label": "Icon", "options": ["Network", "Vision", "Movement", "Globe", "Users", "Rocket"]}},
+        "title": {"type": "Text", "config": {"label": "Title", "placeholder": "Connect Globally"}},
+        "description": {"type": "StructuredText", "config": {"label": "Description", "multi": "paragraph, strong, em", "placeholder": "Network with climate innovators worldwide..."}},
+        "link": {"type": "Link", "config": {"label": "Link", "allowText": true}}
+      }}}
+    }
+  }]}

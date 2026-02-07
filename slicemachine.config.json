@@ -1,7 +1,7 @@
 {
-  "repositoryName": "your-repo-name",
+  "repositoryName": "request",
   "adapter": "@slicemachine/adapter-next",
-  "libraries": ["./src/slices"],
+  "apiEndpoint": "https://request.cdn.prismic.io/api/v2",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
-  "apiEndpoint": ""
+  "libraries": ["src/slices"]
 }

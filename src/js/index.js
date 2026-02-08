@@ -7,7 +7,7 @@ const form = document.getElementById('climate-form');
 
 // Form validation
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', () => {
     // Let Netlify handle form submission
     // Vanilla validation on blur if needed
   });

@@ -5,4 +5,8 @@ import dynamic from "next/dynamic";
 export const components = {
   full_screen_section: dynamic(() => import("./FullScreenSection")),
   rich_text: dynamic(() => import("./RichText")),
+  hero: dynamic(() => import("./Hero")),
+  features_grid: dynamic(() => import("./FeaturesGrid")),
+  cta_banner: dynamic(() => import("./CTABanner")),
+  footer: dynamic(() => import("./Footer")),
 };

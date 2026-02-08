@@ -1,0 +1,43 @@
+{
+  "id": "imprint",
+  "label": "Imprint",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "Imprint / Impressum",
+          "single": "heading1"
+        }
+      },
+      "content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Content",
+          "placeholder": "Legal imprint content...",
+          "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "Imprint - Request Website"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "Legal imprint information"
+        }
+      }
+    }
+  }
+}

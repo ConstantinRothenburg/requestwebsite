@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 
@@ -8,8 +9,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
-      <PrismicPreview repositoryName={repositoryName} />
+      <head>
+        <Script
+          async
+          defer
+          src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${repositoryName}`}
+          strategy="afterInteractive"
+        />
+      </head>
+      <body>
+        {children}
+        <PrismicPreview repositoryName={repositoryName} />
+      </body>
     </html>
   );
 }

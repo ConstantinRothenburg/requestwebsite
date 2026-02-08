@@ -30,6 +30,7 @@ npm run dev
 
 For configuration details, see [docs/configuration.md](docs/configuration.md).
 For a starting content outline, see [docs/content-seed.md](docs/content-seed.md).
+For detailed Prismic population steps, see [docs/REQUEST_CONTENT_GUIDE.toon](docs/REQUEST_CONTENT_GUIDE.toon).
 For the formal setup guide, see [docs/REQUEST_SETUP.toon](docs/REQUEST_SETUP.toon).
 For agent tasks, see [docs/REQUEST_AGENT_TASKS.toon](docs/REQUEST_AGENT_TASKS.toon).
 For design direction, see [docs/REQUEST_DESIGN.toon](docs/REQUEST_DESIGN.toon).

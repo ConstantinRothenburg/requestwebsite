@@ -12,6 +12,14 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "headline": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Headline",
+            "single": "heading2",
+            "placeholder": "Section headline"
+          }
+        },
         "video_url": {
           "type": "Text",
           "config": {

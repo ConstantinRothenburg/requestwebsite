@@ -26,7 +26,6 @@ function validateField(field) {
   const value = field.value.trim();
   const isRequired = field.required;
   const type = field.type;
-  const name = field.name;
 
   if (isRequired && !value) {
     field.classList.add('invalid');

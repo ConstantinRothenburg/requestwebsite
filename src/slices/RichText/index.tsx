@@ -6,6 +6,7 @@ import {
   type SliceComponentProps,
   type JSXMapSerializer,
 } from "@prismicio/react";
+import { getSliceAppearanceStyles } from "@/lib/sliceAppearance";
 import styles from "./index.module.css";
 
 const components: JSXMapSerializer = {
@@ -28,9 +29,15 @@ type RichTextProps = SliceComponentProps<Content.RichTextSlice>;
  * Component for "RichText" Slices.
  */
 const RichText: FC<RichTextProps> = ({ slice }) => {
+  const { sectionStyle, containerStyle } = getSliceAppearanceStyles(
+    slice.primary,
+  );
+
   return (
-    <section className={styles.richtext}>
-      <PrismicRichText field={slice.primary.content} components={components} />
+    <section className={styles.richtext} style={sectionStyle}>
+      <div style={containerStyle}>
+        <PrismicRichText field={slice.primary.content} components={components} />
+      </div>
     </section>
   );
 };

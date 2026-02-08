@@ -1,0 +1,179 @@
+{
+  "id": "site_settings",
+  "label": "Site Settings",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Brand": {
+      "brand_primary_color": {
+        "type": "Color",
+        "config": {
+          "label": "Primary Color"
+        }
+      },
+      "brand_secondary_color": {
+        "type": "Color",
+        "config": {
+          "label": "Secondary Color"
+        }
+      },
+      "brand_accent_color": {
+        "type": "Color",
+        "config": {
+          "label": "Accent Color"
+        }
+      },
+      "brand_background_color": {
+        "type": "Color",
+        "config": {
+          "label": "Background Color"
+        }
+      },
+      "brand_text_color": {
+        "type": "Color",
+        "config": {
+          "label": "Text Color"
+        }
+      }
+    },
+    "Typography": {
+      "font_body": {
+        "type": "Text",
+        "config": {
+          "label": "Body Font Family",
+          "placeholder": "e.g. 'Sora', sans-serif"
+        }
+      },
+      "font_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading Font Family",
+          "placeholder": "e.g. 'Manrope', sans-serif"
+        }
+      },
+      "base_font_size": {
+        "type": "Text",
+        "config": {
+          "label": "Base Font Size",
+          "placeholder": "16px"
+        }
+      },
+      "heading_scale": {
+        "type": "Text",
+        "config": {
+          "label": "Heading Scale",
+          "placeholder": "1.25"
+        }
+      },
+      "line_height": {
+        "type": "Text",
+        "config": {
+          "label": "Line Height",
+          "placeholder": "1.5"
+        }
+      }
+    },
+    "Layout": {
+      "max_content_width": {
+        "type": "Text",
+        "config": {
+          "label": "Max Content Width",
+          "placeholder": "1200px"
+        }
+      },
+      "section_spacing": {
+        "type": "Select",
+        "config": {
+          "label": "Section Spacing",
+          "options": ["Compact", "Normal", "Spacious"],
+          "default_value": "Normal"
+        }
+      },
+      "border_radius": {
+        "type": "Text",
+        "config": {
+          "label": "Default Border Radius",
+          "placeholder": "16px"
+        }
+      }
+    },
+    "Header": {
+      "header_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Header Logo"
+        }
+      },
+      "header_nav": {
+        "type": "Group",
+        "config": {
+          "label": "Header Nav Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Footer": {
+      "footer_text": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Text",
+          "placeholder": "© 2026 Request"
+        }
+      },
+      "footer_social": {
+        "type": "Group",
+        "config": {
+          "label": "Social Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link"
+              }
+            }
+          }
+        }
+      },
+      "footer_legal": {
+        "type": "Group",
+        "config": {
+          "label": "Legal Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

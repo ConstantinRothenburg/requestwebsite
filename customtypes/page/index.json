@@ -36,6 +36,9 @@
             "features_grid": {
               "type": "SharedSlice"
             },
+            "full_screen_section": {
+              "type": "SharedSlice"
+            },
             "cta_banner": {
               "type": "SharedSlice"
             },

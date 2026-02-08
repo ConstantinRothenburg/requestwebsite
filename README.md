@@ -30,6 +30,9 @@ npm run dev
 
 For configuration details, see [docs/configuration.md](docs/configuration.md).
 For a starting content outline, see [docs/content-seed.md](docs/content-seed.md).
+For the formal setup guide, see [docs/REQUEST_SETUP.toon](docs/REQUEST_SETUP.toon).
+For agent tasks, see [docs/REQUEST_AGENT_TASKS.toon](docs/REQUEST_AGENT_TASKS.toon).
+For design direction, see [docs/REQUEST_DESIGN.toon](docs/REQUEST_DESIGN.toon).
 
 To edit the content of this project, go to [prismic.io/dashboard](https://prismic.io/dashboard), click on the repository for this website, and start editing.
 
@@ -43,7 +46,7 @@ Your new page will be accessible by its URL, but it won't appear on the website 
 
 ### Environment variables
 
-Copy `.env.example` to `.env` and set the following values:
+Copy `prismic-next/.env.example` to `prismic-next/.env` and set the following values:
 
 - `NEXT_PUBLIC_PRISMIC_REPOSITORY_NAME` - Your Prismic repository name (the subdomain).
 - `PRISMIC_ACCESS_TOKEN` - Required only if your repo is private or you use environments.
@@ -57,13 +60,15 @@ If you chose this starter when you created a new repository from the Prismic Das
 For this project, configure previews in the Prismic dashboard with:
 
 - Preview URL: `http://localhost:3000/api/preview` (local)
-- Preview URL: `https://<your-domain>/api/preview` (production)
+- Preview URL: `https://request-beryl.vercel.app/api/preview` (cloud)
+
+Preview URLs must point to the Next.js app domain. Do not use `request.prismic.io` or `/slice-simulator` for previews.
 
 ### Webhooks (optional)
 
 If you want published content to revalidate the Next.js cache, add a webhook in Prismic:
 
-- URL: `https://<your-domain>/api/revalidate`
+- URL: `https://request-beryl.vercel.app/api/revalidate`
 - Method: `POST`
 
 If `PRISMIC_WEBHOOK_SECRET` is set, include the `x-prismic-webhook-secret` header with the same value.

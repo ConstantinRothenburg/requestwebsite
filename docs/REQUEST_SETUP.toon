@@ -1,0 +1,76 @@
+Meta{format:TOON_v2.1.0,project:Request-Website-v2.0,document:REQUEST_SETUP,updated:2026-02-08}:
+
+StackOverview{summary}:
+- App:Next.js_App_Router(prismic-next)
+- CMS:Prismic(repo=request)
+- Models:Slice_Machine(local_models_sync_to_Prismic)
+- Hosting:Vercel(root_dir=prismic-next)
+- Previews:/api/preview(local+cloud)
+- Webhook:/api/revalidate(optional)
+
+KeyPaths{locations}:
+- AppRoot:prismic-next/
+- PrismicClient:prismic-next/src/prismicio.ts
+- SliceModels:prismic-next/src/slices/*/model.json
+- CustomTypes:prismic-next/customtypes/*/index.json
+- EnvTemplate:prismic-next/.env.example
+- HealthScript:prismic-next/scripts/stack_health.sh
+
+EnvValues{set_in_prismic-next/.env}:
+- NEXT_PUBLIC_PRISMIC_REPOSITORY_NAME=request
+- PRISMIC_ACCESS_TOKEN=(optional_if_private)
+- NEXT_PUBLIC_PRISMIC_ENVIRONMENT=(optional_override)
+- PRISMIC_WEBHOOK_SECRET=(optional)
+
+PreviewSetup{required}:
+- LocalPreviewURL:http://localhost:3000/api/preview
+- CloudPreviewURL:https://request-beryl.vercel.app/api/preview
+- Note:PreviewURLs_must_use_app_domain_NOT_request.prismic.io
+
+WebhookSetup{optional}:
+- URL:https://request-beryl.vercel.app/api/revalidate
+- Method:POST
+- Header:x-prismic-webhook-secret:PRISMIC_WEBHOOK_SECRET
+
+RecreateTemplate{fast}:
+1) Clone_repo
+2) cd prismic-next
+3) npm install
+4) cp .env.example .env
+5) npm run dev
+6) Open Slice Machine (http://localhost:9999)
+7) Push models to Prismic
+8) Create documents from docs/content-seed.md
+
+HealthCheck{script}:
+- Run: npm run health
+- Extending: add checks for /api/preview and /api/revalidate with curl
+
+ComponentManager{optional}:
+- Ladle_or_Storybook_for_slice_previews
+- Low_setup: Ladel_with_Prismic_slice_rendering_only
+
+MCP{capabilities}:
+- Generate_slice_models
+- Generate_slice_mocks
+- Explain_slice_fields
+- Rapid_content_model_refactors
+- Suggest_type_safe_component_updates
+
+TokenEfficiency{strategy}:
+- Keep_slice_models_small
+- Reuse_shared_appearance_fields
+- Avoid_duplicate_singletons
+
+FlowChart{stack_sync}:
+```mermaid
+flowchart LR
+  Editor[Prismic Editor] -->|Publish| Prismic[Prismic API]
+  SliceMachine[Slice Machine] -->|Sync Models| Prismic
+  Prismic -->|Fetch| NextApp[Next.js App]
+  NextApp -->|Render| Browser[Client Browser]
+  Prismic -->|Webhook| Revalidate[/api/revalidate/]
+  Revalidate -->|revalidateTag(prismic)| NextCache[Next.js Cache]
+  GitHub[GitHub Repo] -->|Deploy| Vercel[Vercel]
+  Vercel -->|Serve| NextApp
+```

@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "eslint .",
     "slicemachine": "start-slicemachine",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "health": "bash scripts/stack_health.sh"
   },
   "dependencies": {
     "@prismicio/client": "7.21.0",

@@ -11,6 +11,11 @@ This doc verifies the current setup and explains how to configure local, Prismic
 - Vercel: no `vercel.json` present. Config handled in Vercel UI.
 - GitHub: no CI or preview config files in this repo.
 
+## App Root
+
+- The active Next.js app lives in `prismic-next/`.
+- The legacy static site at repo root is not used for Prismic.
+
 ## What Vercel Does
 
 - Builds and hosts the Next.js app.
@@ -31,6 +36,7 @@ Create `prismic-next/.env` from `prismic-next/.env.example`:
 cd prismic-next
 npm install
 npm run dev
+npm run health
 ```
 
 - App: http://localhost:3000
@@ -41,11 +47,13 @@ npm run dev
 1) Previews
 
 - Add preview URL: `http://localhost:3000/api/preview`
-- Add preview URL: `https://<your-domain>/api/preview`
+- Add preview URL: `https://request-beryl.vercel.app/api/preview`
+
+Previews must point to the Next.js app domain. Do not use `request.prismic.io` or `/slice-simulator` for previews.
 
 2) Webhook
 
-- URL: `https://<your-domain>/api/revalidate`
+- URL: `https://request-beryl.vercel.app/api/revalidate`
 - Method: `POST`
 - Header: `x-prismic-webhook-secret: <PRISMIC_WEBHOOK_SECRET>` (if set)
 

@@ -86,13 +86,12 @@
 /* CTA Banner */
 .cta-banner {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
-  color: var(--color-white);
+  color: var(--color-text-inverse);
   text-align: center;
   padding: var(--space-4xl) var(--padding-x) !important;
 }
 
 .cta-banner h2 {
-  color: var(--color-white);
   margin-bottom: var(--space-md);
 }
 
@@ -172,7 +171,21 @@
 
 .btn--primary {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text-inverse);
+  font-family: var(--font-family-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  background-color: var(--color-text);
+  border: medium;
+  border-radius: 1px;
+  padding: 0.4rem 1.8rem;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: var(--color-primary-hover);
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
 }
 
 .btn--primary:hover {
@@ -189,7 +202,7 @@
 
 .btn--secondary:hover {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text-inverse);
 }
 
 .btn--lg {

@@ -3,7 +3,6 @@
    ======================================== */
 
 body {
-  background-color: var(--color-white);
   color: var(--color-text);
   font-family: var(--font-family-base);
   line-height: var(--line-height-normal);
